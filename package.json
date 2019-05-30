@@ -2,9 +2,10 @@
   "name": "spark-hub-review-service",
   "version": "1.0.0",
   "description": "Spark mockup for hub reviews and preorders",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/mrvernonliu/spark-hub-review-service/issues"
   },
-  "homepage": "https://github.com/mrvernonliu/spark-hub-review-service#readme"
+  "homepage": "https://github.com/mrvernonliu/spark-hub-review-service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
