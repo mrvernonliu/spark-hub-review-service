@@ -7,7 +7,7 @@ var DishSchema = new mongoose.Schema({
   title: String,
   description: String,
   body: String,
-  favoritesCount: {type: Number, default: 0},
+  ratings: {type: Number, default: 0},
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
 //   tagList: [{ type: String }],
 }, {timestamps: true});
@@ -19,8 +19,8 @@ var DishSchema = new mongoose.Schema({
 //     this.slugify();
 //   }
 
-  next();
-});
+//   next();
+// });
 
 DishSchema.methods.slugify = function() {
   this.slug = slug(this.title) + '-' + (Math.random() * Math.pow(36, 6) | 0).toString(36);
@@ -38,7 +38,6 @@ DishSchema.methods.updateFavoriteCount = function() {
 
 DishSchema.methods.toJSONFor = function(user){
   return {
-    slug: this.slug,
     title: this.title,
     description: this.description,
     body: this.body,
