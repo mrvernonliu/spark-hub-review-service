@@ -1,20 +1,28 @@
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 
-var CommentSchema = new mongoose.Schema({
-  body: String,
-//   author: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-//   dish: { type: mongoose.Schema.Types.ObjectId, ref: 'Dish' }
-}, {timestamps: true});
+// var CommentSchema = new mongoose.Schema({
+//   body: String,
+// }, {timestamps: true});
 
-// Requires population of author
-CommentSchema.methods.toJSONFor = function(user){
-  return {
-    id: this._id,
-    body: this.body,
-    createdAt: this.createdAt,
-    // author: this.author.toProfileJSONFor(user)
-  };
-};
+// // Requires population of author
+// CommentSchema.methods.toJSONFor = function(user){
+//   return {
+//     id: this._id,
+//     body: this.body,
+//     createdAt: this.createdAt,
+//     // author: this.author.toProfileJSONFor(user)
+//   };
+// };
 
-mongoose.model('Comment', CommentSchema);
+// DishSchema.methods.putDish = function() {
+//       var dish = this;
+    
+//       return User.count({favorites: {$in: [dish._id]}}).then(function(count){
+//         dish.favoritesCount = count;
+    
+//         return dish.save();
+//       });
+//     };
+
+// mongoose.model('Comment', CommentSchema);
