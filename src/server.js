@@ -13,6 +13,7 @@ app.use("/dish", dishController);
 app.use("/comment", commentController);
 app.use("/home", homepageController);
 
+mongoose.connect('mongodb://spark-hub-dev1-qubcu.mongodb.net/test');
 
 
 
