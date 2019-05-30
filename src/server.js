@@ -14,7 +14,7 @@ app.use("/dish", dishController);
 app.use("/comment", commentController);
 app.use("/home", homepageController);
 
-mongoose.connect('mongodb+srv://dev:Test123!@spark-hub-dev1-qubcu.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://sparkhub:Test123!@cluster0-d5yty.mongodb.net/test?retryWrites=true&w=majority');
 require('./models/comments');
 require('./models/dishes');
 

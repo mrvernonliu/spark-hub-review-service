@@ -18,3 +18,4 @@ DishSchema.methods.initializeDish = function(){
 };
 
 // mongoose.model('Dish', DishSchema);
+// export default Dish;
